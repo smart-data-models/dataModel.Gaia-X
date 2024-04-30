@@ -1,0 +1,238 @@
+{
+    "@id": "dtmi:com:ngsi-ld:Memory;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Memory data model from Gaia-x service characteristics group adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Gaia-X/master/Memory/schema.json",
+    "description": "Details with respect to properties and capabilities of RAM.",
+    "displayName": "Memory",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "eccEnabled",
+            "writable": true,
+            "displayName": "eccEnabled",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Error connection code allows to detect and correct bit errors in data. True, if error-correction-code is supported by the ram, false otherwise. Default: False."
+        },
+        {
+            "name": "hardwareEncryption",
+            "writable": true,
+            "displayName": "hardwareEncryption",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "If true, encryption of memory at the hardware level is enabled. Default: False."
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "memorySize",
+            "writable": true,
+            "displayName": "memorySize",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Memory size of RAM."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "memoryClass",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "SDRAM",
+                        "displayName": "SDRAM",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "DDR SDRAM",
+                        "displayName": "DDR SDRAM",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "ECC DRAM",
+                        "displayName": "ECC DRAM",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "DDR4",
+                        "displayName": "DDR4",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "DDR5",
+                        "displayName": "DDR5",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "GDDR5",
+                        "displayName": "GDDR5",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "GDDR6",
+                        "displayName": "GDDR6",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 8
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "memoryRank",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "1R RDIMM",
+                        "displayName": "1R RDIMM",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "2R RDIMM",
+                        "displayName": "2R RDIMM",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "4R LRDIMM",
+                        "displayName": "4R LRDIMM",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        }
+    ]
+}
