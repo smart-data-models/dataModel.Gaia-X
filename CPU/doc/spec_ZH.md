@@ -7,16 +7,26 @@
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+全局描述：**虚拟机和物理机的**计算处理单元。  
+版本： 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## 属性列表  
 
 <sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
-<!-- /30-PropertiesList -->  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
+- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `baseFrequency[number]`: CPU 的基本频率。  - `boostFrequency[number]`: 提升 CPU 频率。  - `cpuArchitecture[string]`: 根据 https://gitlab.com/qemu-project/qemu/-/blob/master/target/i386/cpu.c 中定义的结构 static const X86CPUDefinition builtin_x86_defs 的 .name string 所定义的 CPU 架构。未列出的架构将指定为 "other "枚举："x86-32"、"x86-64"、"AArch-32"、"AArch-64"、"RISC-V"、"Other"。  - `cpuFlag[array]`: 由 lscpu 记录并在 https://github.com/torvalds/linux/blob/master/tools/arch/x86/include/asm/cpufeatures.h 中定义的 CPU 标志。未列出的标志将指定为 "其他"。  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `lastLevelCacheSize[number]`: CPU 最后一级缓存大小。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `numberOfCores[number]`: CPU 内核数。  - `numberOfThreads[number]`: CPU 的线程数。  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `smtEnabled[boolean]`: 该 CPU 是否激活了同步多线程 (SMT) 或超线程 (HT)？默认为 "假"。  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `thermalDesignPower[number]`: CPU 散热设计功率。  - `type[string]`: NGSI 实体类型。它必须是 CPU  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
-- 无必要属性  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-NotesYaml -->  
 数据模型来自对 linkml https://gitlab.com/gaia-x/technical-committee/service-characteristics/-/tree/develop/single-point-of-truth?ref_type=heads 中定义的 gaia-X 服务特征数据模型的改编，以便与 NGSI 平台一起使用  
 <!-- /40-NotesYaml -->  
