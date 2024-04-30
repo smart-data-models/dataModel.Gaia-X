@@ -1,0 +1,198 @@
+{
+    "@id": "dtmi:com:ngsi-ld:GPU;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Gpu data model from Gaia-x service characteristics group adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Gaia-X/master/GPU/schema.json",
+    "description": "Graphical processing unit of virtual and physical machines.",
+    "displayName": "GPU",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "gpuMemory",
+            "writable": true,
+            "displayName": "gpuMemory",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Size of memory of the GPU."
+        },
+        {
+            "name": "gpuPassthrough",
+            "writable": true,
+            "displayName": "gpuPassthrough",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "If true, GPU is provided via passthrough, otherwise GPU is virtualized."
+        },
+        {
+            "name": "gpuProcessingUnits",
+            "writable": true,
+            "displayName": "gpuProcessingUnits",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of processing units, also called compute units, execution units or streaming multiprocessors, of the GPU."
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "gpuInterconnection",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "NVLink",
+                        "displayName": "NVLink",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "RoCE2",
+                        "displayName": "RoCE2",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Xe Link",
+                        "displayName": "Xe Link",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Infinity Fabric",
+                        "displayName": "Infinity Fabric",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "none",
+                        "displayName": "none",
+                        "enumValue": 6
+                    }
+                ]
+            }
+        }
+    ]
+}
