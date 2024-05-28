@@ -1,9 +1,9 @@
 
 #         # The code for installing different versions of context brokers are located after the code 
 #         
-import pysmartdatamodels as sdm
+from pysmartdatamodels import pysmartdatamodels as sdm
 import subprocess
-serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
+serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost with 1026 as default port. Edit to match your configuration
 dataModel = "Memory"
 subject = "dataModel.Gaia-X"
 memorySize = 16
@@ -107,8 +107,7 @@ print(result.stdout)
 #        
 #         # now the python code you can use to insert some value in the context broker according to the data model
 #         # Version Warning! 
-#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
-#         # to work with earlier version you need to replace the import instruction for
-#         # from pysmartdatamodels import pysmartdatamodels as sdm
+#         # This code is designed to work with the version 0.8.0.1 of pysmartdatamodels or later
+# 
 #         
 #         
