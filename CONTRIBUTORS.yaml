@@ -1,10 +1,10 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
- name:
- surname:
- mail:
- organization:
- project:
+ name: Markus
+ surname: Leberecht
+ mail: markus.leberecht@intel.com
+ organization: Gaia-X
+ project: Infrastructure SubWG
  comments:
  year:
