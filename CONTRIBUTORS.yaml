@@ -1,18 +1,16 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Markus
- surname: Leberecht
- mail: markus.leberecht@intel.com
- organization: Gaia-X
- project: Infrastructure SubWG
- comments:
- year: 2024
- -
- name: Frederic 
- surname: Ogel
- mail: frederic.ogel@orange.com
- organization: Orange Business
- project: Infrastructure SubWG
- comments:
- year: 2024
+  - name: Markus
+    surname: Leberecht
+    mail: markus.leberecht@intel.com
+    organization: Gaia-X
+    project: Infrastructure SubWG
+    comments:
+    year: 2024
+  - name: Frederic
+    surname: Ogel
+    mail: frederic.ogel@orange.com
+    organization: Orange Business
+    project: Infrastructure SubWG
+    comments:
+    year: 2024
