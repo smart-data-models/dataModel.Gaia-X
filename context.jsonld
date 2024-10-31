@@ -13,12 +13,12 @@
         "baseFrequency": "https://smartdatamodels.org/dataModel.Gaia-X/baseFrequency",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "boostFrequency": "https://smartdatamodels.org/dataModel.Gaia-X/boostFrequency",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "cpuArchitecture": "https://smartdatamodels.org/dataModel.Gaia-X/cpuArchitecture",
         "cpuFlag": "https://smartdatamodels.org/dataModel.Gaia-X/cpuFlag",
@@ -38,7 +38,7 @@
         "hardwareEncryption": "https://smartdatamodels.org/dataModel.Gaia-X/hardwareEncryption",
         "id": "@id",
         "lastLevelCacheSize": "https://smartdatamodels.org/dataModel.Gaia-X/lastLevelCacheSize",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "memoryClass": "https://smartdatamodels.org/dataModel.Gaia-X/memoryClass",
         "memoryRank": "https://smartdatamodels.org/dataModel.Gaia-X/memoryRank",
         "memorySize": "https://smartdatamodels.org/dataModel.Gaia-X/memorySize",
