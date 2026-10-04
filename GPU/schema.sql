@@ -1,3 +1,23 @@
 /* (Beta) Export of data model GPU of the subject dataModel.Gaia-X for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE gpuInterconnection_type AS ENUM ('NVLink','RoCE2','Xe Link','Infinity Fabric','other','none');CREATE TYPE GPU_type AS ENUM ('GPU');
-CREATE TABLE GPU (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, gpuInterconnection gpuInterconnection_type, gpuMemory NUMERIC, gpuPassthrough BOOLEAN, gpuProcessingUnits NUMERIC, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type GPU_type);
+CREATE TYPE gpuInterconnection_type AS ENUM ('NVLink', 'RoCE2', 'Xe Link', 'Infinity Fabric', 'other', 'none');
+CREATE TYPE GPU_type AS ENUM ('GPU');
+CREATE TABLE GPU (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "gpuInterconnection" gpuInterconnection_type,
+  "gpuMemory" NUMERIC,
+  "gpuPassthrough" BOOLEAN,
+  "gpuProcessingUnits" NUMERIC,
+  "id" TEXT PRIMARY KEY,
+  "location" JSON,
+  "name" TEXT,
+  "owner" JSON,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "type" GPU_type
+);
