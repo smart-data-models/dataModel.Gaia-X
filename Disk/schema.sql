@@ -1,6 +1,6 @@
 /* (Beta) Export of data model Disk of the subject dataModel.Gaia-X for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE diskBusType_type AS ENUM ('SATA', 'PATA', 'SCSI', 'SAS', 'NVMe', 'other');
-CREATE TYPE diskType_type AS ENUM ('local HDD', 'local SSD', 'magnetic hard drive', 'hybrid hard drive', 'shared network storage', 'other');
+CREATE TYPE Disk_diskBusType_type AS ENUM ('SATA', 'PATA', 'SCSI', 'SAS', 'NVMe', 'other');
+CREATE TYPE Disk_diskType_type AS ENUM ('local HDD', 'local SSD', 'magnetic hard drive', 'hybrid hard drive', 'shared network storage', 'other');
 CREATE TYPE Disk_type AS ENUM ('Disk');
 CREATE TABLE Disk (
   "address" JSON,
@@ -10,9 +10,9 @@ CREATE TABLE Disk (
   "dateCreated" TIMESTAMP,
   "dateModified" TIMESTAMP,
   "description" TEXT,
-  "diskBusType" diskBusType_type,
+  "diskBusType" Disk_diskBusType_type,
   "diskSize" NUMERIC,
-  "diskType" diskType_type,
+  "diskType" Disk_diskType_type,
   "id" TEXT PRIMARY KEY,
   "location" JSON,
   "name" TEXT,
