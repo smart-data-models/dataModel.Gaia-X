@@ -1,5 +1,5 @@
 /* (Beta) Export of data model CPU of the subject dataModel.Gaia-X for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE cpuArchitecture_type AS ENUM ('x86-32', 'x86-64', 'AArch-32', 'AArch-64', 'RISC-V', 'Other');
+CREATE TYPE CPU_cpuArchitecture_type AS ENUM ('x86-32', 'x86-64', 'AArch-32', 'AArch-64', 'RISC-V', 'Other');
 CREATE TYPE CPU_type AS ENUM ('CPU');
 CREATE TABLE CPU (
   "address" JSON,
@@ -7,7 +7,7 @@ CREATE TABLE CPU (
   "areaServed" TEXT,
   "baseFrequency" NUMERIC,
   "boostFrequency" NUMERIC,
-  "cpuArchitecture" cpuArchitecture_type,
+  "cpuArchitecture" CPU_cpuArchitecture_type,
   "cpuFlag" JSON,
   "dataProvider" TEXT,
   "dateCreated" TIMESTAMP,
